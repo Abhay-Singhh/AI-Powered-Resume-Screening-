@@ -34,6 +34,6 @@ Achieved ~88–92% accuracy on resume classification
 
 Successfully automated end-to-end ATS-style screening pipeline
 
-🛠 Tech Stack
+# Tech Used
 
 Python, TF-IDF, Scikit-learn, Logistic Regression, Pandas, NumPy
