@@ -1,3 +1,5 @@
+"This repository contains an end-to-end resume screening pipeline that simulates ATS behavior using NLP and ML"
+
 Resume Screening System (ATS Simulation)
 
 This project implements an NLP-based resume screening pipeline that simulates basic Applicant Tracking System (ATS) functionality. It extracts relevant information from resumes, compares candidate profiles with job descriptions, computes relevance scores, and produces an automated shortlisting decision.
