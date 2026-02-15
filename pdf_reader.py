@@ -4,7 +4,6 @@ import PyPDF2
 def extract_pdf_text(pdf_path):
     text = ""
 
-    # -------- Attempt 1: pdfplumber (best for resumes) --------
     try:
         with pdfplumber.open(pdf_path) as pdf:
             for page in pdf.pages:
@@ -17,9 +16,9 @@ def extract_pdf_text(pdf_path):
             return text
 
     except Exception as e:
-        pass  # silently fallback
+        pass 
 
-    # -------- Attempt 2: PyPDF2 fallback --------
+    
     try:
         with open(pdf_path, "rb") as file:
             reader = PyPDF2.PdfReader(file)
@@ -31,3 +30,4 @@ def extract_pdf_text(pdf_path):
         pass
 
     return text
+
