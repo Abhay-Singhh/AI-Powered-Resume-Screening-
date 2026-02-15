@@ -24,7 +24,7 @@ if uploaded_file is not None:
     resume_text = extract_pdf_text(temp_pdf_path)
 
     overall_skills = extract_skills(resume_text)
-    st.subheader("🧠 Overall Skills Found")
+    st.subheader(" Overall Skills Found")
 
     if overall_skills:
         st.write(", ".join(overall_skills))
@@ -48,7 +48,7 @@ if uploaded_file is not None:
             job_description
         )
 
-    st.subheader("📌 Extracted Projects")
+    st.subheader(" Extracted Projects")
 
     if projects:
         for i, project in enumerate(projects, start=1):
@@ -68,13 +68,13 @@ if uploaded_file is not None:
         st.warning("Projects could not be confidently extracted")
 
     if job_description and project_results:
-        st.subheader("📊 Overall Project Relevance")
+        st.subheader(" Overall Project Relevance")
         st.progress(final_project_score)
         st.write(f"**Overall Project Relevance:** {round(final_project_score * 100, 2)}%")
 
     if job_description:
         resume_score = match_resume_job(resume_text, job_description)
-        st.subheader("📊 Resume–Job Match Score")
+        st.subheader(" Resume–Job Match Score")
         st.progress(resume_score / 100)
         st.write(f"**Match Percentage:** {resume_score}%")
 
@@ -88,7 +88,7 @@ if uploaded_file is not None:
             projects_count
         )
 
-        st.subheader("🧠 Final Shortlisting Decision")
+        st.subheader(" Final Shortlisting Decision")
         st.write(f"**Shortlisting Probability:** {probability}%")
 
         if decision == "SHORTLIST":
@@ -97,3 +97,4 @@ if uploaded_file is not None:
             st.error("❌ NOT SHORTLISTED")
 
     os.remove(temp_pdf_path)
+
